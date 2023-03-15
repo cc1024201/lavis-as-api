@@ -12,6 +12,7 @@ RUN apt install python3 -y
 RUN python3 --version
 RUN apt install python3-pip -y
 RUN pip install --upgrade pip
+RUN pip install --ignore-installed blinker==1.5
 RUN pip install --no-cache-dir --upgrade -r /image-captioner-api/requirements.txt
 
 COPY . /image-captioner-api/src
